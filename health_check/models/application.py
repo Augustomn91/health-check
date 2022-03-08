@@ -19,6 +19,3 @@ class Application(models.Model):
         r = requests.get(self.url)
         if r.status_code >= 400:
             Status.objects.create(application=self, code=r.status_code)
-
-        else:
-            pass

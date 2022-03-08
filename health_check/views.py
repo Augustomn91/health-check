@@ -3,9 +3,11 @@ from health_check.models import Application, Status
 
 
 # Create your views here.
+
+
 class ApplicationList(ListView):
     model = Application
-    template_name = 'health_check/server.html'
+    template_name = 'health_check/healthcheck.html'
 
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(*args,  **kwargs)
