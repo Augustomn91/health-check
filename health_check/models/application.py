@@ -14,11 +14,8 @@ class Application(models.Model):
     class Meta:
         verbose_name_plural = 'Application'
 
-    # método para criar os códigos no modelo de 'Status'
-    def saveCodes(self):
-        r = requests.get(self.url)
-        if r.status_code >= 400:
-            Status.objects.create(application=self, code=r.status_code)
 
-        else:
-            pass
+    def saveCodes(self):
+        url = requests.get(self.url)
+        Status.objects.create(application=self, code=url.status_code)
+
