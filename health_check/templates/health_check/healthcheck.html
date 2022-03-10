@@ -9,12 +9,20 @@
         rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
         crossorigin="anonymous">
 </head>
-<body>
+<body style="background-color: #1b1b24">
 
+
+    <!--style to reload page-->
     <div class="d-flex flex-row-reverse m-5">
-        <h5>Refreshing in: <label>45</label> seconds..</h5>
+        <h3 ><span class="badge text-light bg-primary">
+            <span class="badge ">Refreshing in:</span>
+            <label class="badge bg-danger">45</label>
+            <span class="badge">seconds..</span></span>
+        </h3>
     </div>
 
+
+    <!--script to reload page-->
     <script>
         let counter = 44;
         setInterval(() => {
