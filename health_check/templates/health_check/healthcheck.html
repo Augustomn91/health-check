@@ -1,105 +1,132 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Verificando URLs</title>
+    <title>Health Check</title>
 
     <!--link bootstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-        rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-        crossorigin="anonymous">
-</head>
-<body style="background-color: #1b1b24">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
+    <style>
+
+    body {
+      background: #1B213B;
+      color: #777;
+      font-family: Montserrat, Arial, sans-serif;
+    }
+
+    .body-bg {
+      background: #F3F4FA !important;
+    }
+
+    .content-area {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    .box {
+      background-color: #262D47;
+      padding: 25px;
+      border-radius: 4px;
+    }
+
+    </style>
+
+</head>
+<body>
 
     <!--navbar-->
     <nav class="navbar navbar-light" style="background-color: #000000;">
-        <div class="container d-flex justify-content-center">
+        <div class="container-md">
             <nav class="navbar navbar-expand-lg navbar-light">
-                <div class="container-fluid">
+                <div class="d-flex justify-content-start">
                     <a class="navbar-brand" href="#">
                         <img src="https://omnisaude.co/assets/img/logo_omnisaude.png" alt="" width="250" height="50">
                     </a>
                 </div>
             </nav>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="d-flex justify-content-end mt-3">
+                  <h3 class="navbar-brand" style="color: #555444">
+                      Refreshing in: <label class="badge bg-danger"> 45</label>
+                  </h3>
+                </div>
+            </nav>
         </div>
     </nav>
 
-    <div class="container-fluid">
-        <div class="d-flex flex-row ">
-            <div class="col">
-                <!--style title-->
-                <div class="d-flex flex-row-end m-2">
-                    <h1 class="text-light">Omni Status</h1>
-                </div>
-            </div>
-            <div class="col">
-                <!--style to reload page-->
-                <div class="d-flex flex-row-reverse m-3">
-                    <h3>
-                        <span class="badge text-light" style="background-color: #000000;">
-                            <span class="badge ">Refreshing in:</span>
-                            <label class="badge bg-danger">45</label>
-                        </span>
-                    </h3>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!--dashboard-->
-    <div class="container-fluid rounded">
-        <div class="d-flex flex-row">
-            <div class="col-12 row p-5">
-                <div class="col-12 col-sm-12 col-md-7 d-flex flex-row p-2">
-                    <div class="col-12 d-flex flex-row align-items-center p-2 rounded" style="background-color: #0b091c">
-                        <canvas id="myCharts"></canvas>
-                    </div>
-                </div>
+	<div id="wrapper">
 
-                <div class="col-12 col-sm-12 col-md-5 p-2">
-                    <div class="d-flex flex-row rounded" style="background-color: #0b091c">
-                        <div class="col-8 d-flex flex-column p-3">
-                            <div><h4><span class="badge mb-3" style="background-color: #F48120">Application</span></h4></div>
-                            <div><h5><span class="badge bg-primary">Omni</span></h5></div>
-                            <div><h5><span class="badge bg-primary">AMH Docs</span></h5></div>
-                            <div><h5><span class="badge bg-primary">Trilhas</span></h5></div>
-                            <div><h5><span class="badge bg-primary">Auditorias v1</span></h5></div>
-                            <div><h5><span class="badge bg-primary">Auditorias v2</span></h5></div>
-                            <div><h5><span class="badge bg-primary">AMH Contas</span></h5></div>
-                            <div><h5><span class="badge bg-primary">ChatBots</span></h5></div>
-                            <div><h5><span class="badge bg-primary">Omnisaude.co</span></h5></div>
+		<div class="content-area">
+			<div class="container-fluid">
+				<div class="main">
+
+
+					<div class="row mt-4">
+
+                        <!--first box-->
+						<div class="col-md-5">
+                            <div class="box mt-4">
+                                <canvas id="myChart" height="220"></canvas>
+                            </div>
+						</div>
+
+                        <!--second box-->
+						<div class="col-md-7">
+                            <div class="box mt-4">
+                                <canvas id="myChart2"></canvas>
+                            </div>
+						</div>
+					</div>
+
+					<div class="row mb-4">
+						<div class="col-md-3">
+                            <div class="box mt-4">
+                                <canvas height="100"></canvas>
+                            </div>
+						</div>
+                        <div class="col-md-3">
+                            <div class="box mt-4">
+                                <canvas height="100"></canvas>
+                            </div>
+						</div>
+                        <div class="col-md-3">
+                            <div class="box mt-4">
+                                <canvas height="100"></canvas>
+                            </div>
                         </div>
-
-                        <div class="col-4 d-flex flex-column align-items-end p-3">
-                            <div><h4><span class="badge mb-3" style="background-color: #F48120">Status</span></h4></div>
-                            <div><h5><span class="badge rounded-pill bg-success">normal</span></h5></div>
-                            <div><h5><span class="badge rounded-pill bg-danger">offline</span></h5></div>
-                            <div><h5><span class="badge rounded-pill bg-success">normal</span></h5></div>
-                            <div><h5><span class="badge rounded-pill bg-success">normal</span></h5></div>
-                            <div><h5><span class="badge rounded-pill bg-success">normal</span></h5></div>
-                            <div><h5><span class="badge rounded-pill bg-success">normal</span></h5></div>
-                            <div><h5><span class="badge rounded-pill bg-success">normal</span></h5></div>
-                            <div><h5><span class="badge rounded-pill bg-success">normal</span></h5></div>
+                        <div class="col-md-3">
+                            <div class="box mt-4">
+                                <canvas height="100"></canvas>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                        <div class="col-md-3">
+                            <div class="box mt-4">
+                                <canvas height="100"></canvas>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="box mt-4">
+                                <canvas height="100"></canvas>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="box mt-4">
+                                <canvas height="100"></canvas>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="box mt-4">
+                                <canvas height="100"></canvas>
+                            </div>
+                        </div>
+					</div>
+				</div>
 
-     <div class="container-md mt-2 mb-2">
-        <div class="d-flex flex-row">
-            <div class="col-12 row">
-                <div class="col-12 d-flex flex-row align-items-center ">
-                    <div class="col-12 d-flex p-2 rounded" style="background-color: #0b091c">
-                        <canvas id="myChart"></canvas>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
+			</div>
+		</div>
+	</div>
 
     <!--script to reload page-->
     <script>
@@ -114,55 +141,97 @@
         }, 1000)
     </script>
 
+    <!--script chart Js-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!--config chart Js-->
+
+    <script>
+      const mensal = [
+        'Marco',
+        'Abril',
+        'Maio',
+      ];
+
+      const hora = [
+        '13:00',
+        '14:00',
+        '15:00',
+        '16:00',
+        '17:00',
+        '18:00',
+      ];
+
+
+      const lineHour = {
+        labels: hora,
+        datasets: [
+        {
+          data: ["200", "200", "200", "500", "404", "200"],
+          label: 'Trilhas',
+          borderColor: '#3e95cd',
+          backgroundColor: '#3e95cd',
+        },
+        {
+          data: ["100", "200", "404", "404", "200", "200"],
+          label: 'ChatBots',
+          borderColor: '#3cba9f',
+          backgroundColor: '#3cba9f',
+        }
+        ]
+      }
+
+      const barMouth = {
+        labels: mensal,
+        datasets: [
+        {
+          data: [200],
+          label: 'Trilhas',
+          borderColor: '#000000',
+          backgroundColor: '#3e95cd',
+          borderWidth:2,
+        },
+        {
+          data: [404],
+          label: 'ChatBots',
+          borderColor: '#000000',
+          backgroundColor: '#3cba9f',
+          borderWidth:2,
+        },
+        ]
+      };
+
+      const configBar = {
+        type: 'bar',
+        data: barMouth,
+        options: {}
+      };
+
+      const configLine = {
+        type: 'line',
+        data: lineHour,
+        options: {}
+      };
+
+
+      const myChart = new Chart(
+        document.getElementById('myChart').getContext('2d'),
+        configBar
+      );
+
+      const myChart2 = new Chart(
+        document.getElementById('myChart2').getContext('2d'),
+        configLine
+      );
+
+    </script>
+
 
     <!--script bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
 
-    <!--chart js-->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>
-        const labels = [
-            'January',
-            'February',
-            'March',
-            'April',
-            'May',
-            'June',
-        ];
 
-        const data = {
-            labels: labels,
-            datasets: [{
-                  label: '',
-                  backgroundColor: 'rgb(244, 127, 32)',
-                  borderColor: 'rgb(244, 127, 32)',
-                  data: [0, 10, 5, 2, 20, 30, 45],
-            }]
-        };
-
-        const config = {
-            type: 'bar',
-            data: data,
-            options: {}
-        };
-
-        const configs = {
-            type: 'line',
-            data: data,
-            options: {}
-        };
-
-        const myChart = new Chart(
-            document.getElementById('myChart'),
-            config
-        );
-
-        const myCharts = new Chart(
-            document.getElementById('myCharts'),
-            configs
-        );
-    </script>
 </body>
 </html>
