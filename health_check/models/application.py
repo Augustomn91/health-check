@@ -15,7 +15,8 @@ class Application(models.Model):
         verbose_name_plural = 'Application'
 
 
-    def saveCodes(self):
-        url = requests.get(self.url)
-        Status.objects.create(application=self, code=url.status_code)
-
+    # @staticmethod
+    # def status_code(self):
+    #     url = requests.get(self.url)
+    #     codes = Status.objects.create(application=self, code=url.status_code)
+    #     return codes

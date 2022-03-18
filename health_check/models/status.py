@@ -1,5 +1,3 @@
-import code
-
 from django.db import models
 
 

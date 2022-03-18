@@ -1,3 +1,4 @@
+{% load tags_extra %}
 <html>
 <head>
     <title>Health Check</title>
@@ -63,65 +64,80 @@
 				<div class="main">
 
 
-					<div class="row mt-4">
+					<div class="row mb-4">
+						<div class="col-md-3">
+                            <div class="box mt-4">
+
+                                <h4 class="text-light">
+                                    {{omniproj_name.name}}
+                                </h4>
+
+                                <h6 class="text-warning">
+                                    {{omniproj_name}}
+                                </h6>
+
+                                <hr class="text-info">
+
+                                <h4 class="text-light">
+                                    <label class="badge bg-{{ omniproj_status.code|badge }}">{{omniproj_status.code}}</label>
+                                </h4>
+
+                            </div>
+						</div>
+                        <div class="col-md-3">
+                            <div class="box mt-4">
+
+                            </div>
+						</div>
+                        <div class="col-md-3">
+                            <div class="box mt-4">
+
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="box mt-4">
+
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="box mt-4">
+
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="box mt-4">
+
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="box mt-4">
+
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="box mt-4">
+
+                            </div>
+                        </div>
+					</div>
+
+                    <div class="row mt-4">
 
                         <!--first box-->
-						<div class="col-md-5">
+						<div class="col-md-6">
                             <div class="box mt-4">
-                                <canvas id="myChart" height="220"></canvas>
+                                <canvas id="myChart"></canvas>
                             </div>
 						</div>
 
                         <!--second box-->
-						<div class="col-md-7">
+						<div class="col-md-6">
                             <div class="box mt-4">
                                 <canvas id="myChart2"></canvas>
                             </div>
 						</div>
 					</div>
 
-					<div class="row mb-4">
-						<div class="col-md-3">
-                            <div class="box mt-4">
-                                <canvas height="100"></canvas>
-                            </div>
-						</div>
-                        <div class="col-md-3">
-                            <div class="box mt-4">
-                                <canvas height="100"></canvas>
-                            </div>
-						</div>
-                        <div class="col-md-3">
-                            <div class="box mt-4">
-                                <canvas height="100"></canvas>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="box mt-4">
-                                <canvas height="100"></canvas>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="box mt-4">
-                                <canvas height="100"></canvas>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="box mt-4">
-                                <canvas height="100"></canvas>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="box mt-4">
-                                <canvas height="100"></canvas>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="box mt-4">
-                                <canvas height="100"></canvas>
-                            </div>
-                        </div>
-					</div>
 				</div>
 
 			</div>
@@ -185,17 +201,59 @@
         labels: mensal,
         datasets: [
         {
-          data: [200],
+          data: [200, 300, 400],
           label: 'Trilhas',
           borderColor: '#000000',
           backgroundColor: '#3e95cd',
           borderWidth:2,
         },
         {
-          data: [404],
+          data: [200, 300, 400],
           label: 'ChatBots',
           borderColor: '#000000',
           backgroundColor: '#3cba9f',
+          borderWidth:2,
+        },
+        {
+          data: [200, 300, 400],
+          label: 'teste3',
+          borderColor: '#000000',
+          backgroundColor: '#43e8c2',
+          borderWidth:2,
+        },
+        {
+          data: [200, 300, 400],
+          label: 'teste4',
+          borderColor: '#000000',
+          backgroundColor: '#b4e843',
+          borderWidth:2,
+        },
+        {
+          data: [200, 300, 400],
+          label: 'teste5',
+          borderColor: '#000000',
+          backgroundColor: '#e88b43',
+          borderWidth:2,
+        },
+        {
+          data: [200, 300, 400],
+          label: 'teste6',
+          borderColor: '#000000',
+          backgroundColor: '#e8ca43',
+          borderWidth:2,
+        },
+        {
+          data: [200, 300, 400],
+          label: 'teste7',
+          borderColor: '#000000',
+          backgroundColor: '#e84343',
+          borderWidth:2,
+        },
+        {
+          data: [200, 300, 400],
+          label: 'teste8',
+          borderColor: '#000000',
+          backgroundColor: '#4287f5',
           borderWidth:2,
         },
         ]
@@ -223,6 +281,7 @@
         document.getElementById('myChart2').getContext('2d'),
         configLine
       );
+
 
     </script>
 
