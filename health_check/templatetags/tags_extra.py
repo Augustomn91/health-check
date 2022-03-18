@@ -11,3 +11,15 @@ def status_bagde(value):
         return "warning"
     else:
         return "danger"
+
+
+@register.filter(name='name_tag')
+def name_tag_badge(value):
+    if value == 'front':
+        return 'red'
+    elif value == 'back':
+        return 'blue'
+    elif value == 'homol':
+        return 'green'
+    elif value == 'prod':
+        return 'black'

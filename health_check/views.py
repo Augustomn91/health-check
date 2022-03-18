@@ -12,7 +12,7 @@ class ApplicationList(TemplateView):
         context = super().get_context_data(**kwargs)
 
         context['omniproj_name'] = Application.objects.get(name='Omniproj')
-        context['omniproj_status'] = Status.objects.get(application__name='Chatbots')
+        context['omniproj_status'] = Status.objects.get(application__name='Omniproj')
 
         return context
 

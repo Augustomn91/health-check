@@ -69,7 +69,7 @@
                             <div class="box mt-4">
 
                                 <h4 class="text-light">
-                                    {{omniproj_name.name}}
+                                    {{omniproj_name.name}} <label>{{omniproj_name.name_tag}}</label>
                                 </h4>
 
                                 <h6 class="text-warning">
@@ -79,7 +79,9 @@
                                 <hr class="text-info">
 
                                 <h4 class="text-light">
-                                    <label class="badge bg-{{ omniproj_status.code|badge }}">{{omniproj_status.code}}</label>
+                                    <label class="badge badge-secondary bg-dark p-2">Status:
+                                        <label class="badge badge rounded-pill bg-{{ omniproj_status.code|badge }}">{{omniproj_status.code}}</label>
+                                    </label>
                                 </h4>
 
                             </div>
