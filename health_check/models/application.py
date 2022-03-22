@@ -1,6 +1,4 @@
-import requests
 from django.db import models
-from .status import Status
 from .choices.name_tags import NameTags
 
 
@@ -17,8 +15,3 @@ class Application(models.Model):
         verbose_name_plural = 'Application'
 
 
-    @staticmethod
-    def status_code(self):
-        url = requests.get(self.url)
-        status_code_create = Status.objects.create(application=self, code=url.status_code)
-        return status_code_create

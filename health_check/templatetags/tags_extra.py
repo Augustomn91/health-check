@@ -16,10 +16,22 @@ def status_bagde(value):
 @register.filter(name='name_tag')
 def name_tag_badge(value):
     if value == 'front':
-        return 'red'
+        return 'color: #d61818;'
     elif value == 'back':
-        return 'blue'
+        return 'color: #d4a517;'
     elif value == 'homol':
-        return 'green'
+        return 'color: #18d3d6;'
     elif value == 'prod':
-        return 'black'
+        return 'color: #18d63c;'
+
+
+@register.filter(name='bootstrap_model')
+def name_bootstrap_model(value):
+    if value == 'front':
+        return 'badge rounded-pill bg-dark border border-danger'
+    elif value == 'back':
+        return 'badge rounded-pill bg-dark border border-warning'
+    elif value == 'homol':
+        return 'badge rounded-pill bg-dark border border-info'
+    elif value == 'prod':
+        return 'badge rounded-pill bg-dark border border-success'

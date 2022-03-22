@@ -69,14 +69,13 @@
                             <div class="box mt-4">
 
                                 <h4 class="text-light">
-                                    {{omniproj_name.name}} <label>{{omniproj_name.name_tag}}</label>
+                                    {{omniproj_name.name}}
+                                    <h6 class="{{omniproj_name.name_tag|bootstrap_model}}" style="{{omniproj_name.name_tag|name_tag}};">{{omniproj_name.name_tag}}</h6>
                                 </h4>
 
-                                <h6 class="text-warning">
+                                <h6 style="color: #ff9900;">
                                     {{omniproj_name}}
                                 </h6>
-
-                                <hr class="text-info">
 
                                 <h4 class="text-light">
                                     <label class="badge badge-secondary bg-dark p-2">Status:
@@ -86,39 +85,150 @@
 
                             </div>
 						</div>
+
                         <div class="col-md-3">
                             <div class="box mt-4">
+
+                                <h4 class="text-light">
+                                    {{amhdocs_name.name}}
+                                    <h6 class="{{amhdocs_name.name_tag|bootstrap_model}}" style="{{amhdocs_name.name_tag|name_tag}};">{{amhdocs_name.name_tag}}</h6>
+                                </h4>
+
+                                <h6 style="color: #ff9900;">
+                                    {{amhdocs_name}}
+                                </h6>
+
+                                <h4 class="text-light">
+                                    <label class="badge badge-secondary bg-dark p-2">Status:
+                                        <label class="badge badge rounded-pill bg-{{ amhdocs_status.code|badge }}">{{amhdocs_status.code}}</label>
+                                    </label>
+                                </h4>
 
                             </div>
 						</div>
+
                         <div class="col-md-3">
                             <div class="box mt-4">
+
+                                 <h4 class="text-light">
+                                    {{chatbots_name.name}}
+                                    <h6 class="{{chatbots_name.name_tag|bootstrap_model}}" style="{{chatbots_name.name_tag|name_tag}};">{{chatbots_name.name_tag}}</h6>
+                                </h4>
+
+                                <h6 style="color: #ff9900;">
+                                    {{chatbots_name}}
+                                </h6>
+
+                                <h4 class="text-light">
+                                    <label class="badge badge-secondary bg-dark p-2">Status:
+                                        <label class="badge badge rounded-pill bg-{{ chatbots_status.code|badge }}">{{chatbots_status.code}}</label>
+                                    </label>
+                                </h4>
 
                             </div>
                         </div>
+
                         <div class="col-md-3">
                             <div class="box mt-4">
+
+                                <h4 class="text-light">
+                                    {{trilhas_name.name}}
+                                    <h6 class="{{trilhas_name.name_tag|bootstrap_model}}" style="{{trilhas_name.name_tag|name_tag}};">{{trilhas_name.name_tag}}</h6>
+                                </h4>
+
+                                <h6 style="color: #ff9900;">
+                                    {{trilhas_name}}
+                                </h6>
+
+                                <h4 class="text-light">
+                                    <label class="badge badge-secondary bg-dark p-2">Status:
+                                        <label class="badge badge rounded-pill bg-{{trilhas_status.code|badge }}">{{trilhas_status.code}}</label>
+                                    </label>
+                                </h4>
 
                             </div>
                         </div>
+
                         <div class="col-md-3">
                             <div class="box mt-4">
+
+                                <h4 class="text-light">
+                                    {{omni_name.name}}
+                                    <h6 class="{{omni_name.name_tag|bootstrap_model}}" style="{{omni_name.name_tag|name_tag}};">{{omni_name.name_tag}}</h6>
+                                </h4>
+
+                                <h6 style="color: #ff9900;">
+                                    {{omni_name}}
+                                </h6>
+
+                                <h4 class="text-light">
+                                    <label class="badge badge-secondary bg-dark p-2">Status:
+                                        <label class="badge badge rounded-pill bg-{{omni_status.code|badge }}">{{omni_status.code}}</label>
+                                    </label>
+                                </h4>
 
                             </div>
                         </div>
+
                         <div class="col-md-3">
                             <div class="box mt-4">
+
+                                <h4 class="text-light">
+                                    {{auditoriasv1_name.name}}
+                                    <h6 class="{{auditoriasv1_name.name_tag|bootstrap_model}}" style="{{auditoriasv1_name.name_tag|name_tag}};">{{auditoriasv1_name.name_tag}}</h6>
+                                </h4>
+
+                                <h6 style="color: #ff9900;">
+                                    {{auditoriasv1_name}}
+                                </h6>
+
+                                <h4 class="text-light">
+                                    <label class="badge badge-secondary bg-dark p-2">Status:
+                                        <label class="badge badge rounded-pill bg-{{auditoriasv1_status.code|badge }}">{{auditoriasv1_status.code}}</label>
+                                    </label>
+                                </h4>
 
                             </div>
                         </div>
+
                         <div class="col-md-3">
                             <div class="box mt-4">
+
+                                <h4 class="text-light">
+                                    {{auditoriasv2_name.name}}
+                                    <h6 class="{{auditoriasv2_name.name_tag|bootstrap_model}}" style="{{auditoriasv2_name.name_tag|name_tag}};">{{auditoriasv2_name.name_tag}}</h6>
+                                </h4>
+
+                                <h6 style="color: #ff9900;">
+                                    {{auditoriasv2_name}}
+                                </h6>
+
+                                <h4 class="text-light">
+                                    <label class="badge badge-secondary bg-dark p-2">Status:
+                                        <label class="badge badge rounded-pill bg-{{auditoriasv2_status.code|badge }}">{{auditoriasv2_status.code}}</label>
+                                    </label>
+                                </h4>
 
                             </div>
                         </div>
+
                         <div class="col-md-3">
                             <div class="box mt-4">
 
+                                 <h4 class="text-light">
+                                    {{siteomni_name.name}}
+                                    <h6 class="{{siteomni_name.name_tag|bootstrap_model}}" style="{{siteomni_name.name_tag|name_tag}};">{{siteomni_name.name_tag}}</h6>
+                                </h4>
+
+                                <h6 style="color: #ff9900;">
+                                    {{siteomni_name}}
+                                </h6>
+
+                                <h4 class="text-light">
+                                    <label class="badge badge-secondary bg-dark p-2">Status:
+                                        <label class="badge badge rounded-pill bg-{{siteomni_status.code|badge }}">{{siteomni_status.code}}</label>
+                                    </label>
+                                </h4>
                             </div>
                         </div>
 					</div>
