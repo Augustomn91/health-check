@@ -11,11 +11,8 @@ class ApplicationList(TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
 
-        try:
 
 
-        except Exception as e:
-            print(e)
 
 
         context['omniproj_name'] = Application.objects.get(name='Omniproj')
@@ -28,7 +25,7 @@ class ApplicationList(TemplateView):
         context['chatbots_status'] = Status.objects.get(application__name='Chatbots')
 
         context['trilhas_name'] = Application.objects.get(name='Trilhas')
-        context['trilhas_status'] = Status.objects.filter(application__name='Trilhas').last()
+        context['trilhas_status'] = Status.objects.get(application__name='Trilhas')
 
         context['omni_name'] = Application.objects.get(name='Omni')
         context['omni_status'] = Status.objects.get(application__name='Omni')
